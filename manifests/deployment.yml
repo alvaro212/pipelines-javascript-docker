@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: alvaropipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: alvaropipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: alvaropipelinesjavascriptdocker 
+          image: ammycontainerregistry.azurecr.io/alvaropipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
